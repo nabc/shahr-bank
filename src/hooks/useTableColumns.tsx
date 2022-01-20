@@ -2,46 +2,54 @@
 import Button from "@mui/material/Button";
 import { useMemo } from "react";
 import { CellProps } from "react-table";
+import { fromAppActions, useApp } from "src/AppContext";
 
-const displayKeys = ["counter-code", "counter-name", "city-name", "province-name", "region", "referer1", "referer2"];
+const displayKeys = ["counterCode", "counterName", "cityName", "provinceName", "region", "reports"];
 
 export default function useTableColumns() {
+  const { dispatch } = useApp();
+
   const columns: any[] = useMemo(() => {
     return displayKeys.map((key: string) => {
       switch (key) {
-        case "referer1":
+        case "reports":
           return {
             accessor: key,
-            Header: () => <>راهبر اول</>,
-            Cell: ({ cell }: CellProps<any>) => <Button variant="contained">{cell.row.original[key].name}</Button>,
-          };
-        case "referer2":
-          return {
-            accessor: key,
-            Header: () => <>راهبر دوم</>,
-            Cell: ({ cell }: CellProps<any>) => <Button variant="contained">{cell.row.original[key].name}</Button>,
+            Header: () => <>گزارش</>,
+            Cell: ({ cell }: CellProps<any>) => (
+              <Button
+                variant="contained"
+                onClick={() => {
+                  console.log(cell.row.original.counterCode);
+
+                  dispatch(fromAppActions.setSelectedCounterCode(cell.row.original.counterCode));
+                }}
+              >
+                مشاهده
+              </Button>
+            ),
           };
         case "region":
           return {
             accessor: key,
             Header: () => "منطقه",
           };
-        case "province-name":
+        case "provinceName":
           return {
             accessor: key,
             Header: () => "نام استان",
           };
-        case "city-name":
+        case "cityName":
           return {
             accessor: key,
             Header: () => "نام شهر",
           };
-        case "counter-code":
+        case "counterCode":
           return {
             accessor: key,
             Header: () => "کد پیشخوان",
           };
-        case "counter-name":
+        case "counterName":
           return {
             accessor: key,
             Header: () => "نام پیشخوان",

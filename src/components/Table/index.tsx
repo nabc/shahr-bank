@@ -6,8 +6,8 @@ import StyledTable, {
   StyledTableHead,
   StyledTableRows,
 } from "./Styles/StyledTable";
-import NoData from "src/core/components/NoData";
-import Loader from "src/core/components/Loader";
+import NoData from "src/components/NoData";
+import Loader from "src/components/Loader";
 import { Paper, useTheme } from "@mui/material";
 
 export interface TableModel<T extends object = {}> extends TableOptions<T> {
@@ -68,36 +68,34 @@ export default function Table<T extends object>({ columns, data, loaded }: Table
               {rows.map((row, index) => {
                 prepareRow(row);
                 return (
-                  <>
-                    <StyledTableRows id={`aa-row${index}-table`} index={index} {...row.getRowProps()}>
-                      {row.cells.map(
-                        (cell: {
-                          getCellProps: () => JSX.IntrinsicAttributes &
-                            React.ClassAttributes<HTMLDivElement> &
-                            React.HTMLAttributes<HTMLDivElement>;
-                          render: (arg0: string) => React.ReactNode;
-                        }) => {
-                          let { style, ...cellProps } = cell.getCellProps();
+                  <StyledTableRows index={index} {...row.getRowProps()}>
+                    {row.cells.map(
+                      (cell: {
+                        getCellProps: () => JSX.IntrinsicAttributes &
+                          React.ClassAttributes<HTMLDivElement> &
+                          React.HTMLAttributes<HTMLDivElement>;
+                        render: (arg0: string) => React.ReactNode;
+                      }) => {
+                        let { style, ...cellProps } = cell.getCellProps();
 
-                          return (
-                            <StyledTableCells
-                              {...(cellProps as any)}
-                              sx={[
-                                (cellProps?.key as string)?.includes("selector") && {
-                                  ...style,
-                                  minWidth: "50px",
-                                  maxWidth: "50px",
-                                  width: "50px",
-                                },
-                              ]}
-                            >
-                              {cell.render("Cell")}
-                            </StyledTableCells>
-                          );
-                        }
-                      )}
-                    </StyledTableRows>
-                  </>
+                        return (
+                          <StyledTableCells
+                            {...(cellProps as any)}
+                            sx={[
+                              (cellProps?.key as string)?.includes("selector") && {
+                                ...style,
+                                minWidth: "50px",
+                                maxWidth: "50px",
+                                width: "50px",
+                              },
+                            ]}
+                          >
+                            {cell.render("Cell")}
+                          </StyledTableCells>
+                        );
+                      }
+                    )}
+                  </StyledTableRows>
                 );
               })}
             </StyledTableBody>

@@ -1,5 +1,5 @@
 import { Fragment, PropsWithChildren } from "react";
-import Header from "src/core/components/Header";
+import Header from "src/components/Header";
 
 type RouterWrapperProps = {};
 

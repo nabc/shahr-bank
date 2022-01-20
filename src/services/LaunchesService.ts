@@ -1,4 +1,4 @@
-import { ParamsModel } from "src/core/types";
+import { ParamsModel } from "src/types";
 import { getInstance } from "./generalInstance";
 
 const launchesInstance = getInstance();
