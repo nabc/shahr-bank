@@ -1,0 +1,7 @@
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope"><soap:Body><getTransactionByDateResponse xmlns="http://bpmellat.co/"><getTransactionByDateResult><?xml version="1.0" encoding="UTF-8"?>
+<response>
+<record>
+<field name="responseCode" value="914" />
+<field name="responseDescription" value="Transaction Not Found" />
+</record>
+</response></getTransactionByDateResult></getTransactionByDateResponse></soap:Body></soap:Envelope>

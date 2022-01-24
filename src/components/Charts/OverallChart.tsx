@@ -3,37 +3,37 @@ import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Responsi
 import convertNumberCharacters from "src/utils/convertNumberCharacters";
 const data = [
   {
-    name: "۱۰/۰۱",
+    name: "۱۱/۰۱",
     issue: 5,
     cancellation: 3,
   },
   {
-    name: "۱۰/۰۲",
+    name: "۱۱/۰۲",
     issue: 8,
     cancellation: 4,
   },
   {
-    name: "۱۰/۰۳",
+    name: "۱۱/۰۳",
     issue: 9,
     cancellation: 3,
   },
   {
-    name: "۱۰/۰۴",
+    name: "۱۱/۰۴",
     issue: 2,
     cancellation: 6,
   },
   {
-    name: "۱۰/۰۵",
+    name: "۱۱/۰۵",
     issue: 4,
     cancellation: 4,
   },
   {
-    name: "۱۰/۰۶",
+    name: "۱۱/۰۶",
     issue: 1,
     cancellation: 5,
   },
   {
-    name: "۱۰/۰۷",
+    name: "۱۱/۰۷",
     issue: 7,
     cancellation: 1,
   },

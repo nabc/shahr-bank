@@ -14,37 +14,37 @@ import convertNumberCharacters from "src/utils/convertNumberCharacters";
 
 const data = [
   {
-    name: "۱۴۰۰/۱۰/۰۱",
+    name: "۱۴۰۰/۱۱/۰۱",
     issue: 5,
     cancellation: -3,
   },
   {
-    name: "۱۴۰۰/۱۰/۰۲",
+    name: "۱۴۰۰/۱۱/۰۲",
     issue: 8,
     cancellation: -4,
   },
   {
-    name: "۱۴۰۰/۱۰/۰۳",
+    name: "۱۴۰۰/۱۱/۰۳",
     issue: 9,
     cancellation: -3,
   },
   {
-    name: "۱۴۰۰/۱۰/۰۴",
+    name: "۱۴۰۰/۱۱/۰۴",
     issue: 2,
     cancellation: -6,
   },
   {
-    name: "۱۴۰۰/۱۰/۰۵",
+    name: "۱۴۰۰/۱۱/۰۵",
     issue: 4,
     cancellation: -4,
   },
   {
-    name: "۱۴۰۰/۱۰/۰۶",
+    name: "۱۴۰۰/۱۱/۰۶",
     issue: 1,
     cancellation: -5,
   },
   {
-    name: "۱۴۰۰/۱۰/۰۷",
+    name: "۱۴۰۰/۱۱/۰۷",
     issue: 7,
     cancellation: -1,
   },

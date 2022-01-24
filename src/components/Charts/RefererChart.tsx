@@ -4,37 +4,37 @@ import convertNumberCharacters from "src/utils/convertNumberCharacters";
 
 const data = [
   {
-    name: "۱۴۰۰/۱۰/۰۱",
+    name: "۱۴۰۰/۱۱/۰۱",
     morningShift: 3,
     nightShift: 4,
   },
   {
-    name: "۱۴۰۰/۱۰/۰۲",
+    name: "۱۴۰۰/۱۱/۰۲",
     morningShift: 1,
     nightShift: 3,
   },
   {
-    name: "۱۴۰۰/۱۰/۰۳",
+    name: "۱۴۰۰/۱۱/۰۳",
     morningShift: 6,
     nightShift: 4,
   },
   {
-    name: "۱۴۰۰/۱۰/۰۴",
+    name: "۱۴۰۰/۱۱/۰۴",
     morningShift: 4,
     nightShift: 4,
   },
   {
-    name: "۱۴۰۰/۱۰/۰۵",
+    name: "۱۴۰۰/۱۱/۰۵",
     morningShift: 3,
     nightShift: 5,
   },
   {
-    name: "۱۴۰۰/۱۰/۰۶",
+    name: "۱۴۰۰/۱۱/۰۶",
     morningShift: 6,
     nightShift: 6,
   },
   {
-    name: "۱۴۰۰/۱۰/۰۷",
+    name: "۱۴۰۰/۱۱/۰۷",
     morningShift: 3,
     nightShift: 5,
   },
