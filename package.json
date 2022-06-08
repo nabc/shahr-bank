@@ -1,8 +1,8 @@
 {
-  "name": "shahr-reports",
+  "name": "shahr-bank",
   "version": "0.1.5",
   "private": true,
-  "homepage": "https://nabc.github.io/shahr-reports",
+  "homepage": "https://nabc.github.io/shahr-bank",
   "proxy": "http://bos.bpm.bankmellat.ir/",
   "dependencies": {
     "@emotion/react": "^11.7.1",
