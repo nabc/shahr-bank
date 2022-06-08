@@ -14,12 +14,10 @@ build:
     paths:
       - build/
 pages:
-  image: alpine:latest
   stage: deploy
   variables:
     GIT_STRATEGY: none # Do not clone git repo
     NODE_ENV: production
-    PUBLIC_URL: https://garrick-open-source.gitlab.io/gitlab-pages-with-react-router
   script:
     # Rename the CRA `build` folder to `public`
     - mv build public
