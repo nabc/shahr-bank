@@ -2,7 +2,7 @@
   "name": "shahr-bank",
   "version": "0.1.5",
   "private": true,
-  "homepage": "https://nabc.github.io",
+  "homepage": "https://nabc.github.io/shahr-bank",
   "proxy": "http://bos.bpm.bankmellat.ir/",
   "dependencies": {
     "@emotion/react": "^11.7.1",
@@ -40,10 +40,12 @@
     "xml2js": "^0.4.23"
   },
   "scripts": {
-    "predeploy": "npm run build",
+    "predeploy": "npm run build && npm run build-docs",
+    "gh-deploy": "npm run deploy && git add . && git push origin main",
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
-    "build": "BUILD_PATH='./docs' react-scripts build",
+    "build": "react-scripts build",
+    "build-docs": "BUILD_PATH='./docs' react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
