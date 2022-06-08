@@ -1,0 +1,28 @@
+# Stages run sequentially, so we add a new `deploy` stage
+# after the `build` one
+stages:
+  - build
+  - deploy
+
+build:
+  image: node:latest # Run the job in a `node` docker image
+  stage: build
+  script:
+    - yarn install # Run `yarn install` and `yarn build`
+    - yarn build
+  artifacts:
+    paths:
+      - build/
+pages:
+  image: alpine:latest
+  stage: deploy
+  variables:
+    GIT_STRATEGY: none # Do not clone git repo
+    NODE_ENV: production
+    PUBLIC_URL: https://garrick-open-source.gitlab.io/gitlab-pages-with-react-router
+  script:
+    # Rename the CRA `build` folder to `public`
+    - mv build public
+  artifacts:
+    paths:
+      - public

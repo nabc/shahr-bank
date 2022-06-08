@@ -1,8 +1,8 @@
 {
-  "name": "snapp-pay-project",
+  "name": "shahr-reports",
   "version": "0.1.5",
   "private": true,
-  "homepage": "https://nabc.github.io/shahr-reports",
+  "homepage": ".",
   "proxy": "http://bos.bpm.bankmellat.ir/",
   "dependencies": {
     "@emotion/react": "^11.7.1",
