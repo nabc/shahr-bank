@@ -2,7 +2,7 @@
   "name": "shahr-reports",
   "version": "0.1.5",
   "private": true,
-  "homepage": ".",
+  "homepage": "https://nabc.github.io/shahr-reports",
   "proxy": "http://bos.bpm.bankmellat.ir/",
   "dependencies": {
     "@emotion/react": "^11.7.1",
